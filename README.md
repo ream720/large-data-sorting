@@ -1,4 +1,4 @@
-#View the deployed application live:
+# View the deployed application live:
 https://ream720.github.io/large-data-sorting/
 
 # Getting Started with Create React App
