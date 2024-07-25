@@ -17,7 +17,6 @@ code {
 }
 
 .body-text {
-  margin-top: 10px; /* Add some spacing between the title and body */
   background-color: #f2f2f2; /* Add a background color to the body */
   padding: 10px; /* Add some padding to the body */
 }
@@ -26,6 +25,8 @@ code {
   /* padding: 10px; */
   /* padding-bottom: 10px; */
   border: 1px solid #ccc;
+  margin-top: 10px;
+  padding-left: 10px;
 }
 
 .row:nth-child(odd) {

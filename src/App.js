@@ -65,13 +65,19 @@ const App = () => {
   };
 
   const rowRenderer = ({ key, index, style }) => (
-    <div
-      key={key}
-      style={style}
-      className="row"
-      onClick={() => toggleBodyVisibility(index)}
-    >
+    <div key={key} style={style} className="row">
       {data[index].id} - {data[index].title}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          paddingRight: "15px",
+        }}
+      >
+        <button onClick={() => toggleBodyVisibility(index)}>
+          {bodyVisible[index] ? "Hide Body Text" : "View Body Text"}
+        </button>
+      </div>
       <div
         className="body-text"
         style={{ display: bodyVisible[index] ? "block" : "none" }}
@@ -95,7 +101,9 @@ const App = () => {
 
   return (
     <div style={{ height: "100vh", paddingBottom: "10px" }}>
-      <div style={{ marginBottom: "10px" }}>
+      <div
+        style={{ marginBottom: "10px", marginTop: "10px", paddingLeft: "10px" }}
+      >
         <label>Sort By: </label>
         <select
           value={sortMethod}
